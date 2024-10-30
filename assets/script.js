@@ -1,18 +1,18 @@
 const slides = [
 	{
-		"image":"tirages.jpg",
+		"image":"slide1.jpg",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
 	{
-		"image":"tirageshd.jpg",
+		"image":"slide2.jpg",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
 	{
-		"image":"couleurs.jpg",
+		"image":"slide3.jpg",
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 	{
-		"image":"autocollants.png",
+		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
@@ -28,3 +28,7 @@ let rightArrowElt = document.querySelector('.arrow_right'); //définit la consta
 rightArrowElt.addEventListener("click", function(){
     console.log("fleche droite cliquee")
 });
+
+//Ajout des bullets points au slider via le HTML
+
+// Modifier le slide au clic flèche droite
