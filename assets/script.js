@@ -70,13 +70,11 @@ dotsContainer.push(dot);
 
 //Changement de slide et défilement infini
 let indexSlides=0;
-const bannerImg=document.querySelector('.banner-img');
-const bannerText=document.querySelector('banner-texte');
 const bulletPoints=document.querySelectorAll('dot');
 
 const rightArrowElt=document.querySelector('.arrow_right');
 rightArrowElt.addEventListener('click',function(){
-bulletPoints[indexSlides].classList.remover("dot_selected");
+bulletPoints[indexSlides].classList.remove("dot_selected");
 indexSlides++;
 
 if(indexSlides>=slides.length){
@@ -84,7 +82,7 @@ if(indexSlides>=slides.length){
 }
 
 bannerImg.src="./assettes/images/slideshow/"+slides[indexSlides].image;
-bannerTexte.innerHTML=slides[indexSlides].tagLine;
+bannerTxt.innerHTML=slides[indexSlides].tagLine;
 bulletPoints[indexSlides].classList.add("dot_selected");
 });
 
@@ -97,7 +95,7 @@ if(indexSlides<0){
 	indexSlides=slides.length-1;
 
 bannerImg.src="./assettes/images/slideshow/"+slides[indexSlides].image;
-bannerTexte.innerHTML=slides[indexSlids].tagLine;
+bannerTxt.innerHTML=slides[indexSlides].tagLine;
 bulletPoints[indexSlides].classList.add("dot_selected");
 }
 })
@@ -111,4 +109,5 @@ dots[initialIndex].classList.add("dot_selected");
 }
 
 //Appeler pour avoir le dot blanc dès le chargement de la page
+let initialIndex = 0;
 nextDots();
