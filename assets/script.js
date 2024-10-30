@@ -14,21 +14,49 @@ const slides = [
 	{
 		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
-	}
-]
+	},
+];
+
+slides.forEach(function(slides,index))
 
 
 // event listener sur les flèches
 let leftArrowElt = document.querySelector('.arrow_left'); //définit la constante flèche gauche
-leftArrowElt.addEventListener("click", function(){
+leftArrowElt.addEventListener("click", previousSlide{
 	console.log("fleche gauche cliquee")
 });
 
 let rightArrowElt = document.querySelector('.arrow_right'); //définit la constante flèche droite
-rightArrowElt.addEventListener("click", function(){
+rightArrowElt.addEventListener("click", nextSlide{
     console.log("fleche droite cliquee")
 });
+
+const bannerImg=document.querySelector(".banner-img");
+const bannerTxt=document.querySelector("#banner p");
 
 //Ajout des bullets points au slider via le HTML
 
 // Modifier le slide au clic flèche droite
+function nextSlide(){
+	initialIndex++;
+	loopSlide(initialIndex);
+	nextDots();
+}
+
+//Appeler la bonne image
+bannerImg.src=./assets/images/slideshow/${slides[initialIndex].image};
+
+//Appeler le bon texte
+bannerTxt.innerHTML=slides[initialIndex].tagLine;
+
+//Tableau vide pour les dots
+const dots=[];
+
+//Création des dots selon les images
+const dotsContainer=document.querySelector(".dots");
+slides.forEach(function (slide,index){
+const dot=document.createElement("span");
+dot.classList.add("dot");
+dotsContainer.appendChild(dot);
+dotsContainer.push(dot);
+})
