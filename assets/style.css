@@ -146,12 +146,12 @@ header {
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dot_selected {
 	background-color: #fff;
 }
-/* Fin du code CSS pour le carousel */
+
 #banner p {
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
@@ -166,6 +166,9 @@ header {
 	font-weight: 400;
 	font-size: 30px;
 }
+
+/* Fin du code CSS pour le carousel */
+
 #about-us {
 	display: flex;
 }
