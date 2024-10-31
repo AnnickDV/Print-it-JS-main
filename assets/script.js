@@ -15,33 +15,17 @@ const slides = [
 		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	},
-	slides.forEach(function (slides,index)		
 	);
 ];
 
-let slideIndex=1;
-showSlides(slideIndex);
+// event listener sur les flèches : si "click" alors action non définie sur la flèche. 
+// Le console.log permet de s'assurer que la fonction est prise en compte même vide
+let leftArrowElt = document.querySelector('.arrow_left'); //définit la constante flèche gauche
+leftArrowElt.addEventListener("click", function(){
+	console.log("fleche gauche cliquee")
+});
 
-function plusSlides(n){
-	showSlides(slideIndex +=n);
-}
-
-function currentSlide(n){
-	showSlides(slideIndex=n);
-}
-
-function showSlides(n) {
-	let i;
-	let slides = document.getElementsByClassName("mySlides");
-	let dots = document.getElementsByClassName("dot");
-	if (n > slides.length) {slideIndex = 1}    
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-	  slides[i].style.display = "none";  
-	}
-	for (i = 0; i < dots.length; i++) {
-	  dots[i].className = dots[i].className.replace(" dot_selected", "");
-	}
-	slides[slideIndex-1].style.display = "block";  
-	dots[slideIndex-1].className += " dot_selected";
-  }
+let rightArrowElt = document.querySelector('.arrow_right'); //définit la constante flèche droite
+rightArrowElt.addEventListener("click", function(){
+    console.log("fleche droite cliquee")
+});
